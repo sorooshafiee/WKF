@@ -1,0 +1,34 @@
+# MATLAB files #
+*.mat
+*.asv
+*.mexw64
+*.mexa64
+*.mexmaci64
+*.mexw64
+*.mexa64
+*.mexmaci64
+*.mexw32
+*.mexa32
+*.mexmaci32
+
+# Figures files #
+*.eps
+*.pdf
+
+# Compiled source #
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
