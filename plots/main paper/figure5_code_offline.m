@@ -36,12 +36,15 @@ err_KLKF = zeros(T, run_count, length(all_c));
 
 % Parameters
 is_TV = true;   % false
-coeff = 0.99;  % 0.99
+
+% for large deviation, set coeff to 0.99, 
+% for small deviation, set coeff to 0.099
+coeff = 0.099;  % 0.99
 tau = 0;
 
 for r = 1 : run_count
 
-    fprintf('Runinig Iteration %d\n', r);
+    fprintf('Running Iteration %d\n', r);
 
     [x, y, y0] = generate_data(sys, x_0, T, coeff, is_TV);
 
