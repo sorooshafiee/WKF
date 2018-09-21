@@ -1,6 +1,16 @@
 clc
 clear all
 
+
+% Parameters
+% set time variant parameter true or false
+is_TV = false;  
+
+% for large deviation, set coeff to 0.99, 
+% for small deviation, set coeff to 0.099
+coeff = 0.099;
+
+
 % Problem setting
 n = 2;
 m = 1;
@@ -34,13 +44,8 @@ err_KF = zeros(T, run_count);
 err_WKF = zeros(T, run_count, length(all_c));
 err_KLKF = zeros(T, run_count, length(all_c));
 
-% Parameters
-is_TV = true;   % false
 
-% for large deviation, set coeff to 0.99, 
-% for small deviation, set coeff to 0.099
-coeff = 0.099;  % 0.99
-tau = 0;
+tau = 0; % set to Kullback Leibler
 
 for r = 1 : run_count
 
