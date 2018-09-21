@@ -16,7 +16,7 @@ rel_gap = zeros(opts.iter_max, run_count);
 
 for r = 1 : run_count
 
-    fprintf('Runinig Iteration %d\n', r);
+    fprintf('Running Iteration %d\n', r);
 
     rho = sqrt(d);
     n = fix(d/5);

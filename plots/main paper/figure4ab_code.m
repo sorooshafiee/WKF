@@ -16,7 +16,7 @@ time_count = zeros(2, length(all_d), run_count);
 
 for r = 1 : run_count
 
-    fprintf('Runinig Iteration %d\n', r);
+    fprintf('Running Iteration %d\n', r);
 
     k = 1;
     iter_r = zeros(2, length(all_d));

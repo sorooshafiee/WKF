@@ -9,8 +9,8 @@ vec = @(x) x(:);
 out_of_sample_loss = @(G, S) vec([eye(size(G,1)), -G; -G', G'*G])' * vec(S);
 
 % Problem setting
-n = 8;
-m = 2;
+n = 80;
+m = 20;
 d = n + m;
 run_count = 10000;
 opts.verbose = false;
@@ -22,7 +22,7 @@ MMSE = zeros(1, run_count);
 
 for r = 1 : run_count
 
-    fprintf('Runinig Iteration %d\n', r);
+    fprintf('Running Iteration %d\n', r);
 
     A = randn(d);
     [R, ~] = eig(A + A');

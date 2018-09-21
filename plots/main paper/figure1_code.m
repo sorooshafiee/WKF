@@ -107,7 +107,7 @@ saveas(gcf, 'KL', 'svg')
 saveas(gcf, 'KL', 'epsc')
 cd ..
 
-%%
+
 %%
 % Plot ellipsoid representing the error for tau1
 figure;

@@ -34,7 +34,7 @@ tau = 0;
 
 for r = 1 : run_count
 
-    fprintf('Runinig Iteration %d\n', r);
+    fprintf('Running Iteration %d\n', r);
 
     [x, y, y0] = generate_data(sys, x_0, T, coeff, is_TV);
 
