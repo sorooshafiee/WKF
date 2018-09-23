@@ -4,13 +4,21 @@ clearvars
 % Set seed number
 rng(12345);
 
+
+% Problem setting
+% for d = 100, set n = 80, m = 20
+% for d = 50, set n = 40, m = 10
+% for d = 10, set n = 8, m = 2
+n = 8;
+m = 2;
+
+
+
 % Auxilary function
 vec = @(x) x(:);
 out_of_sample_loss = @(G, S) vec([eye(size(G,1)), -G; -G', G'*G])' * vec(S);
 
-% Problem setting
-n = 80;
-m = 20;
+
 d = n + m;
 run_count = 10000;
 opts.verbose = false;
@@ -58,7 +66,7 @@ h2 = histogram(DRO-MMSE,'Normalization','pdf');
 set(gca, 'FontSize', 12);
 ylabel('Probability density','FontSize', font_size, 'Interpreter', 'latex');
 xlabel('Relative mean square error','FontSize', font_size, 'Interpreter', 'latex');
-leg1 = legend({'${\rm Bayes}$', '${\rm Wasserstein}$'}, 'Interpreter', 'latex');
+leg1 = legend({'${\rm Bayesian}$', '${\rm Wasserstein}$'}, 'Interpreter', 'latex');
 set(leg1,'FontSize',16);
 if d == 10
     xlim([-0.1,2.0])
