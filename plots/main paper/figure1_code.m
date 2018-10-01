@@ -69,6 +69,7 @@ xlabel('$x$', 'Interpreter', 'latex', 'FontSize', 20);
 ylabel('$y$', 'Interpreter', 'latex', 'FontSize', 20);
 xticks(sort([-limx:2:limx, 0]))
 set(gcf, 'Position', [100, 100, 800, 800])
+remove_border()
 cd figs/
 saveas(gcf, 'Wass', 'svg')
 saveas(gcf, 'Wass', 'epsc')
@@ -102,6 +103,7 @@ xlabel('$x$', 'Interpreter', 'latex', 'FontSize', 20);
 ylabel('$y$', 'Interpreter', 'latex', 'FontSize', 20);
 
 set(gcf, 'Position', [100, 100, 800, 800])
+remove_border()
 cd figs/
 saveas(gcf, 'KL', 'svg')
 saveas(gcf, 'KL', 'epsc')
@@ -136,6 +138,7 @@ xlabel('$x$', 'Interpreter', 'latex', 'FontSize', 20);
 ylabel('$y$', 'Interpreter', 'latex', 'FontSize', 20);
 
 set(gcf, 'Position', [100, 100, 800, 800])
+remove_border()
 cd figs/
 saveas(gcf, 'tau1', 'svg')
 saveas(gcf, 'tau1', 'epsc')
